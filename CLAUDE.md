@@ -18,6 +18,11 @@
 - Ne JAMAIS faire de patchwork ou de solutions temporaires. Résoudre les problèmes à la racine.
 - Quand l'utilisateur est frustré ou impatient, ne PAS répondre impulsivement pour patcher vite. Prendre le temps de réfléchir, analyser, et proposer une solution solide même si ça prend plus de temps.
 
+## Communication avec l'utilisateur
+
+- Quand l'utilisateur doit coller, transmettre ou exécuter un texte (message pour une autre session, commande, SQL, valeur d'un champ, etc.), toujours lui donner le texte complet et exact directement dans la réponse, dans un bloc prêt à copier.
+- Ne jamais le renvoyer à un message précédent de la conversation (« le message de mon update précédente », « voir plus haut ») ni lui faire chercher dans l'historique : répéter l'information nécessaire à chaque fois, même si elle a déjà été donnée.
+
 ## Qualité du code
 
 - Expliquer ce qui se passe et ce qui va être fait avant d'agir.
