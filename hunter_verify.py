@@ -3,17 +3,18 @@
 Script pour vérifier et enrichir les emails des cliniques médico-esthétiques
 des Laurentides via l'API Hunter.io.
 
-Usage: python3 hunter_verify.py
+Usage: HUNTER_API_KEY=<clé> python3 hunter_verify.py
 """
 
 import csv
 import json
+import os
 import time
 import urllib.request
 import urllib.error
 import sys
 
-API_KEY = "6b65a1f40876dbf2d47f28b4dc2b6f99d372ec93"
+API_KEY = os.environ.get("HUNTER_API_KEY", "")
 BASE_URL = "https://api.hunter.io/v2"
 
 INPUT_CSV = "cliniques_medico_esthetiques_laurentides.csv"
@@ -232,6 +233,9 @@ def update_csv(domain_results, finder_results, verify_results):
 
 
 def main():
+    if not API_KEY:
+        sys.exit("HUNTER_API_KEY manquante : définir la variable d'environnement avant de lancer le script.")
+
     print("=" * 60)
     print("HUNTER.IO - Cliniques Médico-Esthétiques Laurentides")
     print("=" * 60)
